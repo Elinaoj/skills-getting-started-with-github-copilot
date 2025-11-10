@@ -85,21 +85,52 @@ section h3 {
   color: #1a237e;
 }
 
-.participants ul {
-  margin-left: 20px;
-  padding-left: 0;
+.participant-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.participants li {
-  display: list-item; /* keep the bullet */
-  margin-bottom: 8px;
+.participant-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 6px 10px;
   background: #f1f8ff;
   border: 1px solid #d7e9ff;
   border-radius: 6px;
   color: #0b3d91;
   font-size: 0.95rem;
-  list-style-position: inside;
+}
+
+.participant-name {
+  flex: 1;
+  word-break: break-word;
+}
+
+.delete-participant {
+  background: none;
+  border: none;
+  color: #0b3d91;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.delete-participant:hover {
+  color: #c62828;
+  transform: scale(1.2);
+}
+
+.delete-participant:active {
+  transform: scale(0.95);
 }
 
 .participants.empty .muted {
